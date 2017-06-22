@@ -20,11 +20,11 @@ $(function() {
 
   manageUrlParams();
 
-  $('.project-title span').hide();
-  $(projects[currentProject])
-    .find('.project-title .first-line')
-    .show()
-    .addClass('animated slideInDown');
+  // $('.project-title span').hide();
+  // $(projects[currentProject])
+  //   .find('.project-title .first-line')
+  //   .show()
+  //   .addClass('animated slideInDown');
 
 
   /*----------- Event listeners -----------*/
@@ -159,15 +159,15 @@ $(function() {
       .show()
       .css('position', 'relative')
       .animate({
-        'width': '-=160px',
+        'width': '-=12%',
         'height': '-=120px',
-        'margin-top': '+=100px',
-        'margin-left': '+=70px'
+        'margin-top': '+=84px',
+        'margin-left': '+=6%'
       }, 2000, function() {
         $('.project-title')
           .addClass('active')
           .animate({
-            'margin-top': '-=62%'
+            'top': '-66px'
           }, 500);
         $('body').css('overflow', 'auto');
         $('.top-link').css('color', '#333');
@@ -184,11 +184,12 @@ $(function() {
     $('section.project').fadeOut();
     $('.container').show();
     $('.project-title')
-      .delay(400)
+      .hide()
       .animate({
-        'margin-top': '0'
+        'top': '40%'
       }, 2000, function() {
         $(this).removeClass('active');
+        $(this).fadeIn();
       });
     $(projects[currentProject])
       .delay(400)
@@ -225,7 +226,7 @@ $(function() {
     if (p) {
       let projectFoud = false;
       $(projects).each(function(i, item) {
-        let projectName = $(item).children('h1.project-title').attr('data-open');
+        let projectName = $(item).find('h1.project-title').attr('data-open');
         if (projectName == p) {
           projectFoud = true;
           currentProject = i;
@@ -235,7 +236,6 @@ $(function() {
           $(projects[rightProject]).css('left', '+100%');
           $(projects[leftProject]).css('left', '-100%');
           $(projects).show();
-
           openProject(projectName);
         }
       });
