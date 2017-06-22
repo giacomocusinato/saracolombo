@@ -1,7 +1,6 @@
-$icon-font-path: '../fonts/';
-// bower:scss
- @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
- // endbower
+$icon-font-path: '../fonts/'; // bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss"; // endbower
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -59,44 +58,26 @@ html {
     background-image: url('../images/black_main.jpg');
   }
 
-  .project-title-wrapper {
-    // height: 90%;
-    // width: 100%;
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // z-index: 1;
-    // width: 600px;
-    // height: 60px;
-    // background: red;
-    // position: absolute;
-    // top: 45%;
-    // left: calc(50% - 300px);
-    // position: absolute;
-    // left: 50%;
-    // top: 40%;
+  h1.project-title {
+    font-family: 'Fugue Regular', sans-serif;
+    font-size: 66px;
+    color: white;
+    text-shadow: 1px 1px #666;
+    cursor: pointer;
+    z-index: 1;
+    display: block;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-    h1.project-title {
-      font-family: 'Fugue Regular', sans-serif;
-      font-size: 66px;
-      color: white;
-      text-shadow: 1px 1px #666;
-      cursor: pointer;
-      z-index: 1;
-      display: block;
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+    &:hover {
+      color: #333;
+    }
 
-
-      &:hover {
-        color: #333;
-      }
-      &.active {
-        color: #333;
-        cursor: auto;
-      }
+    &.active {
+      color: #333;
+      cursor: auto;
     }
   }
 }
