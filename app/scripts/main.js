@@ -57,7 +57,7 @@ $(function() {
 
   $('.project-title').click(function() {
     let p = $(this).attr('data-open');
-    window.history.replaceState("page" + p, p, "?p=" + p);
+    window.history.replaceState('page' + p, p, '?p=' + p);
     openProject(getUrlParam('p'));
   });
 
@@ -206,7 +206,7 @@ $(function() {
 
         resetContainersSize();
 
-        window.history.replaceState("home", "Sara Colombo", "/")
+        window.history.replaceState('home', 'Sara Colombo', '/')
       })
     $('body').css('overflow', 'hidden');
   }
