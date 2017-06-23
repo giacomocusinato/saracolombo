@@ -17,14 +17,14 @@ $(function() {
 
   /*----------- Inits -----------*/
 
-  var parallax = document.querySelectorAll(".parallax"),
+  var parallax = document.querySelectorAll('.parallax'),
     speed = 0.2;
 
   function parallaxEffect() {
     [].slice.call(parallax).forEach(function(el, i) {
 
       var windowYOffset = window.pageYOffset,
-        elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+        elBackgrounPos = '50% ' + (windowYOffset * speed) + 'px';
 
       el.style.backgroundPosition = elBackgrounPos;
 
