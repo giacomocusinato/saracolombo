@@ -136,11 +136,9 @@ $(function() {
     $(projects[currentProject])
       .find('.project-title .first-line')
       .fadeIn()
-      .addClass('animated slideInDown');
     $(projects[currentProject])
       .find('.project-title .second-line')
       .fadeIn()
-      .addClass('animated slideInUp');
 
     $(projects[rightProject]).css('left', '+100%');
     $(projects[leftProject]).css('left', '-100%');
@@ -163,7 +161,7 @@ $(function() {
         'height': '-=120px',
         'margin-top': '+=84px',
         'margin-left': '+=6%'
-      }, 2000, function() {
+      }, 1200, function() {
         $('.project-title')
           .addClass('active')
           .animate({
@@ -184,10 +182,10 @@ $(function() {
     $('section.project').fadeOut();
     $('.container').show();
     $('.project-title')
-      .hide()
+      .fadeOut()
       .animate({
         'top': '40%'
-      }, 2000, function() {
+      }, 1200, function() {
         $(this).removeClass('active');
         $(this).fadeIn();
       });
@@ -197,7 +195,7 @@ $(function() {
         'width': '100%',
         'height': '100%',
         'margin': '0'
-      }, 2000, function() {
+      }, 1200, function() {
         $(this).css('position', 'absolute');
         $('.top-link').css('color', 'white');
         $('.top-link.left').fadeOut();
