@@ -4,7 +4,9 @@
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.1",
-    "animate.css": "^3.5.2"
+    "animate.css": "^3.5.2",
+    "gsap": "^1.19.1",
+    "scrollmagic": "^2.0.5"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -12,6 +14,13 @@
         "assets/stylesheets/_bootstrap.scss",
         "assets/fonts/bootstrap/*",
         "assets/javascripts/bootstrap.js"
+      ]
+    },
+    "scrollmagic": {
+      "main": [
+        "scrollmagic/uncompressed/ScrollMagic.js",
+        "scrollmagic/uncompressed/plugins/animation.gsap.js",
+        "scrollmagic/uncompressed/plugins/jquery.ScrollMagic.js"
       ]
     }
   },

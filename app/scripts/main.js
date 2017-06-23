@@ -17,21 +17,6 @@ $(function() {
 
   /*----------- Inits -----------*/
 
-  var parallax = document.querySelectorAll('.parallax'),
-    speed = 0.2;
-
-  function parallaxEffect() {
-    [].slice.call(parallax).forEach(function(el, i) {
-
-      var windowYOffset = window.pageYOffset,
-        elBackgrounPos = '50% ' + (windowYOffset * speed) + 'px';
-
-      el.style.backgroundPosition = elBackgrounPos;
-
-    });
-  }
-
-
   manageUrlParams();
 
   // $('.project-title span').hide();
@@ -60,8 +45,6 @@ $(function() {
   $(window).on('wheel', function(e) {
     let deltaY = e.originalEvent.deltaY;
     let deltaX = e.originalEvent.deltaX;
-
-    parallaxEffect();
 
     if (
       deltaY > 1 || deltaY < -1 ||
