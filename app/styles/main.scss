@@ -58,6 +58,11 @@ html {
     background-image: url('../images/black_main.jpg');
   }
 
+  &.firefighter {
+    left: +100%;
+    background-image: url('../images/firefighter_main.jpg');
+  }
+
   h1.project-title {
     font-family: 'Fugue Regular', sans-serif;
     font-size: 66px;
