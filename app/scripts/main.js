@@ -12,12 +12,16 @@ $(function() {
   let animationOnGoing = false;
   let projectOpened = false;
   let touchStart;
-
+  let interval;
+  let intervalTime = 5000;
 
 
   /*----------- Inits -----------*/
 
   manageUrlParams();
+
+  interval = setTimeout(callback, intervalTime);
+
 
   // $('.project-title span').hide();
   // $(projects[currentProject])
@@ -40,6 +44,7 @@ $(function() {
     } else if (touchStart < touchEnd - 5) {
       swipeProject('left');
     }
+    clearTimeout(interval);
   });
 
   $(window).on('wheel', function(e) {
@@ -50,6 +55,8 @@ $(function() {
       deltaY > 1 || deltaY < -1 ||
       deltaX > 1 || deltaX < -1
     ) return;
+
+    clearTimeout(interval);
 
     swipeProject(deltaY > 0 || deltaX > 0 ? 'right' : 'left')
   });
@@ -244,6 +251,13 @@ $(function() {
       $(projects).show();
     }
 
+  }
+
+  
+  function callback() {
+    intervalTime = 7000;
+    swipeProject('right');
+    interval = setTimeout(callback, intervalTime);
   }
 
 
