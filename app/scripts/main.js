@@ -23,11 +23,10 @@ $(function() {
   interval = setTimeout(callback, intervalTime);
 
 
-  // $('.project-title span').hide();
-  // $(projects[currentProject])
-  //   .find('.project-title .first-line')
-  //   .show()
-  //   .addClass('animated slideInDown');
+  $('.project-title span').hide();
+  $(projects[currentProject])
+    .find('.project-title span')
+    .fadeIn()
 
 
   /*----------- Event listeners -----------*/
@@ -253,7 +252,7 @@ $(function() {
 
   }
 
-  
+
   function callback() {
     intervalTime = 7000;
     swipeProject('right');
