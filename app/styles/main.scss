@@ -9,8 +9,7 @@ $icon-font-path: '../fonts/'; // bower:scss
   padding: 0.2em 0;
 }
 
-body,
-html {
+html, body {
   overflow: hidden;
   height: 100%;
   font-family: 'Fugue Regular', sans-serif;
@@ -35,7 +34,7 @@ html {
   }
 }
 
-.container {
+.project-hero {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -85,8 +84,73 @@ html {
 
 main {
   margin: 48px calc(6% + 12px);
+}
 
-  section.project {
-    display: none;
+section.project {
+  display: none;
+}
+
+.parallax {
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+}
+
+section.sperduta {
+  .row {
+    margin: 24px 0 48px 0;
+  }
+
+  .text-1 {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .boon1 {
+    background-image: url("../images/sperduta/boon1.jpg");
+    background-size: 60%;
+    height: 100vh;
+    margin-top: -50px;
+  }
+
+  .text-2 {
+    margin-top: 100px;
+  }
+
+  .boon2 {
+    background-image: url("../images/sperduta/boon2.jpg");
+    background-size: 80%;
+    height: 150vh;
+    margin-top: -200px;
+  }
+
+  .pdue9 {
+    background-image: url("../images/sperduta/pdue9.jpg");
+    background-size: 80%;
+    height: 150vh;
+    margin-top: -300px;
+  }
+
+  .pdue12 {
+    background-image: url("../images/sperduta/pdue12.jpg");
+    background-size: 80%;
+    height: 150vh;
+    margin-top: -300px;
+  }
+
+  .text-3 {
+    text-align: center;
+    font-size: 22px;
+    margin-top: 100px;
+  }
+
+  .text-4 {
+    margin-top: 100px;
+  }
+
+  .boon3 {
+    background-image: url("../images/sperduta/boon3.jpg");
+    background-size: 80%;
+    height: 180vh;
+    margin-top: -500px;
   }
 }

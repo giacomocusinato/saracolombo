@@ -5,7 +5,7 @@ $(function() {
   /*----------- Global variables -----------*/
 
 
-  let projects = $('.container');
+  let projects = $('.project-hero');
   let currentProject = 1;
   let rightProject = 2;
   let leftProject = 0;
@@ -16,6 +16,20 @@ $(function() {
 
 
   /*----------- Inits -----------*/
+
+  var parallax = document.querySelectorAll(".parallax"),
+    speed = 0.2;
+
+  function parallaxEffect() {
+    [].slice.call(parallax).forEach(function(el, i) {
+
+      var windowYOffset = window.pageYOffset,
+        elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+
+      el.style.backgroundPosition = elBackgrounPos;
+
+    });
+  }
 
 
   manageUrlParams();
@@ -46,6 +60,8 @@ $(function() {
   $(window).on('wheel', function(e) {
     let deltaY = e.originalEvent.deltaY;
     let deltaX = e.originalEvent.deltaX;
+
+    parallaxEffect();
 
     if (
       deltaY > 1 || deltaY < -1 ||
@@ -150,7 +166,7 @@ $(function() {
 
     projectOpened = true;
     animationOnGoing = true;
-    $('.container').hide();
+    $('.project-hero').hide();
 
 
     $(projects[currentProject])
@@ -167,7 +183,7 @@ $(function() {
           .animate({
             'top': '-66px'
           }, 500);
-        $('body').css('overflow', 'auto');
+        $('html, body').css('overflow', 'visible');
         $('.top-link').css('color', '#333');
         $('.top-link.left').fadeIn();
         $('section.project.' + name).fadeIn();
@@ -180,7 +196,7 @@ $(function() {
 
     animationOnGoing = true;
     $('section.project').fadeOut();
-    $('.container').show();
+    $('.project-hero').show();
     $('.project-title')
       .fadeOut()
       .animate({
@@ -207,7 +223,7 @@ $(function() {
 
         window.history.replaceState('home', 'Sara Colombo', '/')
       })
-    $('body').css('overflow', 'hidden');
+    $('html, body').css('overflow', 'hidden');
   }
 
   function resetContainersSize() {
