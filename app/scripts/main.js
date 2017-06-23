@@ -156,7 +156,8 @@ $(function() {
     projectOpened = true;
     animationOnGoing = true;
     $('.project-hero').hide();
-
+    $('.project-title')
+      .addClass('active')
 
     $(projects[currentProject])
       .show()
