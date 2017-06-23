@@ -85,6 +85,9 @@ html {
     &.active {
       color: #333;
     }
+    span {
+      display: inline !important;
+    }
   }
 }
 
