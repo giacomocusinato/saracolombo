@@ -18,16 +18,15 @@ $(function() {
 
   /*----------- Inits -----------*/
 
+  preloadImages();
   manageUrlParams();
 
   interval = setTimeout(callback, intervalTime);
 
 
-  $('.project-title span').hide();
   $(projects[currentProject])
     .find('.project-title span')
-    .fadeIn()
-
+    .fadeIn();
 
   /*----------- Event listeners -----------*/
 
@@ -49,11 +48,6 @@ $(function() {
   $(window).on('wheel', function(e) {
     let deltaY = e.originalEvent.deltaY;
     let deltaX = e.originalEvent.deltaX;
-
-    if (
-      deltaY > 1 || deltaY < -1 ||
-      deltaX > 1 || deltaX < -1
-    ) return;
 
     clearTimeout(interval);
 
@@ -284,6 +278,17 @@ $(function() {
       return projects.length - 1;
     else
       return i - 1;
+  }
+
+  function preloadImages() {
+      let images = [
+        '../images/sperduta_man.jpg',
+        '../images/roots_man.jpg',
+        '../images/firefighter_main.jpg',
+        '../images/black_main.jpg'
+      ]
+      for (let e = 0; e < images.length; e++)
+          $("<img />").attr("src", images[e])
   }
 
 });
