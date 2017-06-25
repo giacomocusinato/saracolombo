@@ -25,7 +25,7 @@ $(function() {
 
 
   $(projects[currentProject])
-    .find('.project-title span')
+    .find('.project-title')
     .fadeIn();
 
   /*----------- Event listeners -----------*/
@@ -114,7 +114,7 @@ $(function() {
         'left': '-=100%'
       }, 2000);
     } else {
-      $(projects[currentProject]).show().animate({
+      $(projects[currentProject]).animate({
         'left': '+=50%'
       }, 2000, function() {
         rightProject = currentProject;
@@ -131,13 +131,10 @@ $(function() {
   }
 
   function swipeEnded() {
-    $('.project-title span').hide();
+    $('.project-title').hide();
     $(projects[currentProject])
-      .find('.project-title .first-line')
-      .fadeIn()
-    $(projects[currentProject])
-      .find('.project-title .second-line')
-      .fadeIn()
+      .find('.project-title')
+      .fadeIn();
 
     $(projects[rightProject]).css('left', '+100%');
     $(projects[leftProject]).css('left', '-100%');
