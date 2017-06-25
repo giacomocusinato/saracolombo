@@ -1,6 +1,6 @@
 $icon-font-path: '../fonts/'; // bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-// endbower
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss"; // endbower
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -41,8 +41,6 @@ html {
   height: 100vh;
   width: 100vw;
   overflow: none;
-  position: absolute;
-  display: inline !important;
 
   &.roots {
     left: -100%;
@@ -85,11 +83,9 @@ html {
     &.active {
       color: #333;
     }
-
     @media screen and (max-width: 600px) {
       font-size: 42px;
     }
-
   }
 }
 
