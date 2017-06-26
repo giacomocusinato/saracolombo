@@ -131,6 +131,7 @@ $(function() {
   }
 
   function swipeEnded() {
+    $('.project-title').show();
     $('.project-title').hide();
     $(projects[currentProject])
       .find('.project-title')
@@ -147,8 +148,9 @@ $(function() {
     projectOpened = true;
     animationOnGoing = true;
     $('.project-hero').hide();
-    $('.project-title')
-      .addClass('active')
+    $(projects[currentProject])
+      .find('.project-title')
+      .addClass('active');
 
     $(projects[currentProject])
       .show()
@@ -160,7 +162,6 @@ $(function() {
         'margin-left': '+=6%'
       }, 1200, function() {
         $('.project-title')
-          .addClass('active')
           .animate({
             'top': '-72px'
           }, 500);
@@ -177,11 +178,11 @@ $(function() {
 
     animationOnGoing = true;
     $('section.project').fadeOut();
-    $('.project-hero').show();
-    $('.project-title')
+    $(projects[currentProject])
+      .find('.project-title')
       .fadeOut()
       .animate({
-        'top': '40%'
+        'top': '45%'
       }, 1200, function() {
         $(this).removeClass('active');
         $(this).fadeIn();
@@ -196,11 +197,12 @@ $(function() {
         $(this).css('position', 'absolute');
         $('.top-link').css('color', 'white');
         $('.top-link.left').fadeOut();
-        animationOnGoing = false;
-        projectOpened = false;
-
 
         resetContainersSize();
+        $('.project-hero').show();
+
+        animationOnGoing = false;
+        projectOpened = false;
 
         window.history.replaceState('home', 'Sara Colombo', '/')
       })
@@ -208,12 +210,17 @@ $(function() {
   }
 
   function resetContainersSize() {
+    $('.project-title').css('top', '45%');
+
     $(projects).css({
-      'width': '100%',
-      'height': '100%',
+      'width': '100vw',
+      'height': '100vh',
       'margin-top': '0',
       'margin-left': '0'
     });
+    $(projects[currentProject]).css('left', '0');
+    $(projects[leftProject]).css('left', '-100%');
+    $(projects[rightProject]).css('left', '+100%');
   }
 
   function manageUrlParams() {
@@ -279,8 +286,8 @@ $(function() {
 
   function preloadImages() {
       let images = [
-        '../images/sperduta_man.jpg',
-        '../images/roots_man.jpg',
+        '../images/sperduta_main.jpg',
+        '../images/roots_main.jpg',
         '../images/firefighter_main.jpg',
         '../images/black_main.jpg'
       ]
