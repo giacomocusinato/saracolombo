@@ -156,13 +156,13 @@ $(function() {
       .animate({
         'width': '-=12%',
         'height': '-=120px',
-        'margin-top': '+=84px',
+        'margin-top': '+96px',
         'margin-left': '+=6%'
       }, 1200, function() {
         $('.project-title')
           .addClass('active')
           .animate({
-            'top': '-66px'
+            'top': '-72px'
           }, 500);
         $('html, body').css('overflow', 'visible');
         $('.top-link').css('color', '#333');

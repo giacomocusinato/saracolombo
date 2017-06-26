@@ -1,0 +1,139 @@
+main {
+  margin: 48px 12%;
+}
+
+section.project {
+  display: none;
+
+  .image {
+    max-height: 800px;
+  }
+
+  .row {
+    margin: 160px 0;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+  }
+}
+
+.line-big {
+  width: 160px;
+  height: 2px;
+  background-color: #333;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 48px;
+}
+
+.box {
+  background-color: #333;
+  opacity: 0.8;
+  position: absolute;
+  padding: 24px 12px 12px 24px;
+  width: 40%;
+  left: 10%;
+
+  .line {
+    width: 42px;
+    height: 2px;
+    background-color: #f5f5f5;
+    margin: -6px 0 8px -12px;
+  }
+
+  p {
+    font-size: 18px;
+    color: #F5F5F5;
+  }
+}
+
+section.sperduta {
+  .section-1 {
+    text-align: center;
+    font-size: 24px;
+  }
+
+
+  .section-2 .image {
+    margin-left: auto;
+    margin-right: auto;
+    height: 45vw;
+    width: 100%;
+    background-image: url("../images/sperduta/boon1.jpg");
+    background-size: 120%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+
+  .section-3 .box {
+    top: 56px;
+    padding-right: 8%;
+
+    @media screen and (max-width: 1268px) {
+      top: 24px;
+      left: 0;
+      padding-right: 12%;
+      width: 50%;
+    }
+  }
+  .section-3 .image {
+    background-image: url("../images/sperduta/boon2.jpg");
+    background-size: 120%;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    height: 60vw;
+    width: 55%;
+    float: right;
+  }
+
+  .section-4 .image {
+    background-size: 120%;
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    height: 60vw;
+    width: 48%;
+
+    &:nth-child(1) {
+      background-image: url("../images/sperduta/pdue12.jpg");
+    }
+
+    &:nth-child(2) {
+      background-image: url("../images/sperduta/pdue9.jpg");
+      float: right;
+    }
+  }
+
+  .section-5 {
+    text-align: center;
+    font-size: 24px;
+  }
+
+
+  .section-6 .box {
+    left: 25%;
+    padding-right: 24%;
+    bottom: 36px;
+
+    @media screen and (max-width: 1268px) {
+      left: 0;
+      bottom: 24px;
+      padding-right: 15%;
+      width: 50%;
+    }
+  }
+  .section-6 .image {
+    background-image: url("../images/sperduta/boon3.jpg");
+    background-size: 120%;
+    background-position: 50% 60%;
+    background-repeat: no-repeat;
+    height: 60vw;
+    width: 55%;
+    float: right;
+
+    @media screen and (max-width: 1268px) {
+      padding-bottom: 300px;
+    }
+  }
+}

@@ -2,6 +2,8 @@ $icon-font-path: '../fonts/'; // bower:scss
  @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
  // endbower
 
+@import "projects";
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -88,91 +90,5 @@ html {
     @media screen and (max-width: 600px) {
       font-size: 42px;
     }
-  }
-}
-
-main {
-  margin: 48px 0;
-}
-
-section.project {
-  display: none;
-}
-
-.parallax {
-  // background-position: 50% 0;
-  // background-repeat: no-repeat;
-}
-
-section.sperduta {
-  .row {
-    margin: 120px 6%;
-    position: relative;
-  }
-
-  .section-1 {
-    text-align: center;
-    font-size: 22px;
-  }
-
-  .section-2 .image {
-    margin-left: auto;
-    margin-right: auto;
-    height: 60vh;
-    width: 70vw;
-    background-image: url("../images/sperduta/boon1.jpg");
-    background-size: 120%;
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-  }
-
-  .section-3 p {
-    font-size: 18px;
-  }
-
-  .section-3 .image {
-    background-image: url("../images/sperduta/boon2.jpg");
-    background-size: 120%;
-    background-position: 50% 30%;
-    background-repeat: no-repeat;
-    height: 40vw;
-    width: 45%;
-    float: right;
-  }
-
-  .section-4 .image {
-    background-size: 120%;
-    background-position: 0 50%;
-    background-repeat: no-repeat;
-    height: 40vw;
-    width: 45%;
-
-    &:nth-child(1) {
-      background-image: url("../images/sperduta/pdue12.jpg");
-    }
-
-    &:nth-child(2) {
-      background-image: url("../images/sperduta/pdue9.jpg");
-      float: right;
-    }
-  }
-
-  .section-5 {
-    text-align: center;
-    font-size: 22px;
-  }
-
-  .section-6 p {
-    font-size: 18px;
-  }
-
-  .section-6 .image {
-    background-image: url("../images/sperduta/boon3.jpg");
-    background-size: 120%;
-    background-position: 0 80%;
-    background-repeat: no-repeat;
-    height: 40vw;
-    width: 45%;
-    float: right;
   }
 }
