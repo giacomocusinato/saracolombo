@@ -1,0 +1,76 @@
+section.roots {
+  .section-2 .image {
+    background-image: url("../images/roots/1.jpg");
+    background-size: 120%;
+    background-position: 50% 60%;
+    background-repeat: no-repeat;
+    height: 60vw;
+    width: 55%;
+    float: left;
+  }
+  .section-2 .box {
+    bottom: 12%;
+    left: 51%;
+    padding-left: 6%;
+    width: 36%;
+  }
+
+  .section-3 .image {
+    background-image: url("../images/roots/6.jpg");
+    background-size: 120%;
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    height: 45vw;
+    width: 100%;
+  }
+
+  .section-4 p {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 42%;
+    padding-left: 24px;
+    font-size: 18px;
+    border-left: 4px solid #333;
+  }
+  .section-4 .image {
+    background-image: url("../images/roots/3.jpg");
+    background-size: 120%;
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    height: 60vw;
+    width: 55%;
+    float: right;
+  }
+
+  .section-5 .image {
+    background-image: url("../images/roots/4.jpg");
+    background-size: 120%;
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    height: 60vw;
+    width: 55%;
+    float: left;
+  }
+
+  .section-6 .line-big {
+    margin-bottom: 0;
+    margin-top: 48px;
+  }
+
+  .section-7 .image {
+    background-image: url("../images/roots/2.jpg");
+    background-size: 120%;
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    height: 60vw;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section-7 {
+    margin-bottom: 0;
+  }
+}

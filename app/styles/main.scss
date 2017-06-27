@@ -2,7 +2,9 @@ $icon-font-path: '../fonts/'; // bower:scss
  @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
  // endbower
 
-@import "projects";
+@import "projects/projects";
+@import "projects/sperduta";
+@import "projects/roots";
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -57,7 +59,7 @@ html {
 
   &.black {
     left: +100%;
-    background-image: url('../images/black_main_old.jpg');
+    background-image: url('../images/black_main.jpg');
   }
 
   &.firefighter {
