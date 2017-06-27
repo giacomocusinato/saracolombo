@@ -8,19 +8,51 @@ $(function() {
     this.container = container;
   };
 
-  let sliderOne = new slider($('.section-2 .slider'));
-  let sliderTwo = new slider($('.section-3 .slider'));
+  let sliderOne = new slider($('.sperduta .section-2 .slider'));
+  let sliderTwo = new slider($('.sperduta .section-3 .slider'));
+
+  let sliderThree = new slider($('.firefighters .section-3 .slider'));
+  let sliderFourLeft = new slider($('.firefighters .section-6 .slider.left'));
+  let sliderFourRight = new slider($('.firefighters .section-6 .slider.right'));
+  let sliderFive = new slider($('.firefighters .section-10 .slider'));
+  let sliderSix = new slider($('.firefighters .section-12 .slider'));
+
+
   let animationOnGoing = false;
 
 
-  $('.section-2 .slider-nav').click(function() {
+  $('.sperduta .section-2 .slider-nav').click(function() {
     $(this).hasClass('right') ?
       swipe(sliderOne, 'left') : swipe(sliderOne, 'right')
   });
-  $('.section-3 .slider-nav').click(function() {
+  $('.sperduta .section-3 .slider-nav').click(function() {
     $(this).hasClass('right') ?
       swipe(sliderTwo, 'left') : swipe(sliderTwo, 'right')
   });
+  $('.firefighters .section-3 .slider-nav').click(function() {
+    $(this).hasClass('right') ?
+      swipe(sliderThree, 'left') : swipe(sliderThree, 'right')
+  });
+  $('.firefighters .section-6 .slider-nav').click(function() {
+    if($(this).hasClass('right')) {
+      swipe(sliderFourLeft, 'left');
+      swipe(sliderFourRight, 'left');
+    } else {
+      swipe(sliderFourLeft, 'right');
+      swipe(sliderFourRight, 'right');
+    }
+
+  });
+  $('.firefighters .section-10 .slider-nav').click(function() {
+    $(this).hasClass('right') ?
+      swipe(sliderFive, 'left') : swipe(sliderFive, 'right')
+  });
+  $('.firefighters .section-12 .slider-nav').click(function() {
+    console.log('hello');
+    $(this).hasClass('right') ?
+      swipe(sliderSix, 'left') : swipe(sliderSix, 'right')
+  });
+
 
   $('.slider').hover(function() {
     $(this).children('.slider-nav').fadeIn();
@@ -30,7 +62,7 @@ $(function() {
 
   function swipe(slider, direction) {
     if (animationOnGoing) return;
-    animationOnGoing = true;
+    //animationOnGoing = true;
 
     let imageToSlide, currentImageVelocity;
     if (direction == 'left') {
@@ -62,6 +94,7 @@ $(function() {
         images.eq(slider.leftImage).css('left', '-100%');
         images.eq(slider.rightImage).css('left', '100%');
 
+        console.log(slider);
         animationOnGoing = false;
       });
   }

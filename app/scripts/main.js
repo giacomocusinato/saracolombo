@@ -288,7 +288,7 @@ $(function() {
       let images = [
         '../images/sperduta_main.jpg',
         '../images/roots_main.jpg',
-        '../images/firefighter_main.jpg',
+        '../images/firefighters_main.jpg',
         '../images/black_main.jpg'
       ]
       for (let e = 0; e < images.length; e++)

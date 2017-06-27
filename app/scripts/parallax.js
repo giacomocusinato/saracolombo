@@ -68,4 +68,21 @@ $(function() {
       ease: Linear.easeNone
     }))
     .addTo(controller);
+
+
+
+  /*----------- Firefighters scenes -----------*/
+
+  $('.firefighters .row').each(function(i) {
+    new ScrollMagic.Scene({
+        triggerElement: '.firefighters .section-' + (i + 1),
+        duration: 1500,
+      })
+      .setTween(TweenMax.to('.firefighters .section-' + (i + 2) + ' .image', 1, {
+        backgroundPosition: '50% 100%',
+        ease: Linear.easeNone
+      }))
+      .addTo(controller);
+  });
+
 });

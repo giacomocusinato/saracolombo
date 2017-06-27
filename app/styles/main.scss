@@ -5,6 +5,7 @@ $icon-font-path: '../fonts/'; // bower:scss
 @import "projects/projects";
 @import "projects/sperduta";
 @import "projects/roots";
+@import "projects/firefighters";
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -62,9 +63,9 @@ html {
     background-image: url('../images/black_main.jpg');
   }
 
-  &.firefighter {
+  &.firefighters {
     left: +100%;
-    background-image: url('../images/firefighter_main.jpg');
+    background-image: url('../images/firefighters_main.jpg');
   }
 
   h1.project-title {

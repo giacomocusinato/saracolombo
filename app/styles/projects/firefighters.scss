@@ -1,0 +1,290 @@
+section.firefighters {
+  .section-2 .image {
+    background-image: url("../images/firefighters/sacco/14.jpg");
+    background-size: 130%;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    height: 38vw;
+    width: 65%;
+    float: left;
+  }
+
+  .section-3 .slider {
+    margin-left: auto;
+    margin-right: auto;
+    height: 45vw;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .section-3 .slider-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  .section-3 .image {
+    background-size: 120%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+    &:nth-of-type(1) {
+      background-image: url("../images/firefighters/sacco/11.jpg");
+      left: -100%;
+    }
+    &:nth-of-type(2) {
+      background-image: url("../images/firefighters/sacco/2.jpg");
+    }
+    &:nth-of-type(3) {
+      background-image: url("../images/firefighters/sacco/4.jpg");
+      left: +100%;
+    }
+    &:nth-of-type(4) {
+      background-image: url("../images/firefighters/sacco/6.jpg");
+      left: +100%;
+    }
+  }
+
+  .section-4 .box {
+    top: 56px;
+    padding-right: 8%;
+    z-index: 4;
+
+    @media screen and (max-width: 1268px) {
+      top: 24px;
+      left: 0;
+      padding-right: 12%;
+      width: 50%;
+    }
+  }
+  .section-4 .image {
+    background-image: url("../images/firefighters/sacco/8.jpg");
+    background-size: 110%;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    height: 58vw;
+    width: 55%;
+    float: right;
+  }
+
+  .section-5 .image {
+    background-image: url("../images/firefighters/sacco/5.jpg");
+    background-size: 110%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    height: 45vw;
+    width: 100%;
+  }
+
+  .section-6 .slider {
+    height: 25vw;
+    width: 48%;
+    overflow: hidden;
+    position: relative;
+
+    &.left {
+      float: left;
+      .image:nth-of-type(1) {
+        background-image: url("../images/firefighters/sacco/10.jpg");
+        left: -100%;
+      }
+      .image:nth-of-type(2) {
+        background-image: url("../images/firefighters/sacco/13.jpg");
+      }
+      .image:nth-of-type(3) {
+        background-image: url("../images/firefighters/sacco/10.jpg");
+        left: +100%;
+      }
+      .image:nth-of-type(4) {
+        background-image: url("../images/firefighters/sacco/13.jpg");
+        left: +100%;
+      }
+    }
+    &.right {
+      float: right;
+
+      .image:nth-of-type(1) {
+        background-image: url("../images/firefighters/sacco/12.jpg");
+        left: -100%;
+      }
+      .image:nth-of-type(2) {
+        background-image: url("../images/firefighters/sacco/7.jpg");
+      }
+      .image:nth-of-type(3) {
+        background-image: url("../images/firefighters/sacco/9.jpg");
+        left: +100%;
+      }
+    }
+  }
+  .section-6 .slider-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  .section-6 .image {
+    background-size: 120%;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  .section-7 .image {
+    background-image: url("../images/firefighters/sacco.gif");
+    background-size: 120%;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40vw;
+    width: 80%;
+  }
+
+  .section-8 p {
+    width: 100%;
+    font-size: 24px;
+    border-left: 3px solid #333;
+    padding-left: 24px;
+  }
+
+  .section-9 .image {
+    background-image: url("../images/firefighters/postina/3.jpg");
+    background-size: 120%;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    height: 58vw;
+    width: 65%;
+    float: left;
+  }
+
+
+  .section-10 p {
+    font-size: 18px;
+    position: absolute;
+    width: 48%;
+    bottom: 0;
+    border-left: 3px solid #333;
+    padding-left: 24px;
+  }
+  .section-10 .slider {
+    background: red;
+    height: 30vw;
+    width: 48%;
+    overflow: hidden;
+    position: relative;
+    float: right;
+  }
+  .section-10 .slider-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  .section-10 .image {
+    background-size: 110%;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+    &:nth-of-type(1) {
+      background-image: url("../images/firefighters/sketchbook/9.jpg");
+      left: -100%;
+    }
+    &:nth-of-type(2) {
+      background-image: url("../images/firefighters/sketchbook/1.jpg");
+    }
+    &:nth-of-type(3) {
+      background-image: url("../images/firefighters/sketchbook/2.jpg");
+      left: +100%;
+    }
+    &:nth-of-type(4) {
+      background-image: url("../images/firefighters/sketchbook/3.jpg");
+      left: +100%;
+    }
+    &:nth-of-type(5) {
+      background-image: url("../images/firefighters/sketchbook/4.jpg");
+    }
+    &:nth-of-type(6) {
+      background-image: url("../images/firefighters/sketchbook/5.jpg");
+      left: +100%;
+    }
+    &:nth-of-type(7) {
+      background-image: url("../images/firefighters/sketchbook/6.jpg");
+      left: +100%;
+    }
+    &:nth-of-type(8) {
+      background-image: url("../images/firefighters/sketchbook/7.jpg");
+    }
+    &:nth-of-type(9) {
+      background-image: url("../images/firefighters/sketchbook/8.jpg");
+      left: +100%;
+    }
+  }
+
+  .section-11 .image {
+    background-image: url("../images/firefighters/postina/1.jpg");
+    background-size: 120%;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    height: 55vw;
+    width: 100%;
+    float: left;
+  }
+
+  .section-12 .slider {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: red;
+    height: 50vw;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .section-12 .slider-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+  .section-12 .image {
+    background-size: 120%;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+    &:nth-of-type(1) {
+      background-image: url("../images/firefighters/postina/9.jpg");
+      left: -100%;
+    }
+    &:nth-of-type(2) {
+      background-image: url("../images/firefighters/postina/6.jpg");
+    }
+    &:nth-of-type(3) {
+      background-image: url("../images/firefighters/postina/2.jpg");
+      left: +100%;
+    }
+    &:nth-of-type(4) {
+      background-image: url("../images/firefighters/postina/4.jpg");
+      left: +100%;
+    }
+    &:nth-of-type(5) {
+      background-image: url("../images/firefighters/postina/5.jpg");
+      left: +100%;
+    }
+    &:nth-of-type(6) {
+      background-image: url("../images/firefighters/postina/8.jpg");
+      left: +100%;
+    }
+  }
+}
