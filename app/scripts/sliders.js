@@ -34,12 +34,14 @@ $(function() {
       swipe(sliderThree, 'left') : swipe(sliderThree, 'right')
   });
   $('.firefighters .section-6 .slider-nav').click(function() {
-    if($(this).hasClass('right')) {
-      swipe(sliderFourLeft, 'left');
-      swipe(sliderFourRight, 'left');
+    if ($(this).hasClass('right')) {
+      swipe(sliderFourLeft, 'left', true);
+      swipe(sliderFourRight, 'left', true);
+      animationOnGoing = true;
     } else {
-      swipe(sliderFourLeft, 'right');
-      swipe(sliderFourRight, 'right');
+      swipe(sliderFourLeft, 'right', true);
+      swipe(sliderFourRight, 'right', true);
+      animationOnGoing = true;
     }
 
   });
@@ -48,21 +50,28 @@ $(function() {
       swipe(sliderFive, 'left') : swipe(sliderFive, 'right')
   });
   $('.firefighters .section-12 .slider-nav').click(function() {
-    console.log('hello');
     $(this).hasClass('right') ?
       swipe(sliderSix, 'left') : swipe(sliderSix, 'right')
   });
 
 
   $('.slider').hover(function() {
-    $(this).children('.slider-nav').fadeIn();
+    $(this)
+      .children('.slider-nav.left')
+      .fadeIn()
+      .addClass('animated slideInRight');
+    $(this)
+      .children('.slider-nav.right')
+      .fadeIn()
+      .addClass('animated slideInLeft');
   }, function() {
     $(this).children('.slider-nav').fadeOut();
   });
 
-  function swipe(slider, direction) {
+  function swipe(slider, direction, isDoubleSlider = false) {
     if (animationOnGoing) return;
-    //animationOnGoing = true;
+    if (!isDoubleSlider)
+      animationOnGoing = true;
 
     let imageToSlide, currentImageVelocity;
     if (direction == 'left') {
@@ -86,7 +95,7 @@ $(function() {
       .css('z-index', '1')
       .animate({
         'left': '0'
-      }, 1200, function () {
+      }, 1200, function() {
         slider.currentImage = imageToSlide;
         slider.rightImage = calcNext(imageToSlide, images);
         slider.leftImage = calcPrevious(imageToSlide, images);

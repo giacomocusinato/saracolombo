@@ -1,7 +1,7 @@
 $(function() {
 
   let controller = new ScrollMagic.Controller();
-
+  
 
   /*----------- Sperduta scenes -----------*/
 
