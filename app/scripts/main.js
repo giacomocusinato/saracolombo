@@ -292,7 +292,7 @@ $(function() {
         '../images/black_main.jpg'
       ]
       for (let e = 0; e < images.length; e++)
-          $("<img />").attr("src", images[e])
+          $('<img />').attr('src', images[e])
   }
 
 });
