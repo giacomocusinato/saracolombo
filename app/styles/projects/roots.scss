@@ -7,12 +7,39 @@ section.roots {
     height: 60vw;
     width: 55%;
     float: left;
+
+    @media screen and (max-width: 480px) {
+      width: 75%;
+      height: 74vw;
+      float: right;
+    }
   }
   .section-2 .box {
     bottom: 12%;
     left: 51%;
     padding-left: 6%;
     width: 36%;
+
+    @media screen and (max-width: 480px) {
+      width: 100% !important;
+      clear: both;
+      padding: 0 !important;
+      left: 0;
+      bottom: 0 !important;
+      position: relative;
+      background-color: white;
+      opacity: 1;
+      .line {
+        display: none;
+      }
+       p {
+         font-size: 16px;
+         color: #333;
+         display: block;
+         border-left: 2px solid #333;
+         padding: 24px 0 0 24px;
+       }
+    }
   }
 
   .section-3 .image {
@@ -33,7 +60,16 @@ section.roots {
     width: 42%;
     padding-left: 24px;
     font-size: 18px;
-    border-left: 4px solid #333;
+    border-left: 2px solid #333;
+
+    @media screen and (max-width: 480px) {
+      position: relative;
+      clear: both;
+      width: 100%;
+      font-size: 16px;
+      margin: 24px 0 -24px 0;
+      padding-top: 32px;
+    }
   }
   .section-4 .image {
     background-image: url("../images/roots/3.jpg");
@@ -43,6 +79,11 @@ section.roots {
     height: 60vw;
     width: 55%;
     float: right;
+
+    @media screen and (max-width: 480px) {
+      width: 75%;
+      height: 74vw;
+    }
   }
 
   .section-5 .image {
@@ -53,8 +94,16 @@ section.roots {
     height: 60vw;
     width: 55%;
     float: left;
+
+    @media screen and (max-width: 480px) {
+      width: 75%;
+      height: 74vw;
+    }
   }
 
+  .section-6 .hero {
+    font-size: 18px;
+  }
   .section-6 .line-big {
     margin-bottom: 0;
     margin-top: 48px;
@@ -69,8 +118,10 @@ section.roots {
     width: 55%;
     margin-left: auto;
     margin-right: auto;
-  }
-  .section-7 {
-    margin-bottom: 0;
+
+    @media screen and (max-width: 480px) {
+      width: 75%;
+      height: 74vw;
+    }
   }
 }

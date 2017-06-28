@@ -77,7 +77,8 @@ section.firefighters {
          color: #333;
          display: block;
          border-left: 2px solid #333;
-         padding-left: 12px;
+         padding: 0 0 24px 24px;
+         font-size: 16px;
        }
     }
     @media screen and (max-width: 1268px) {
@@ -192,6 +193,7 @@ section.firefighters {
 
     @media screen and (max-width: 480px) {
       font-size: 18px;
+      border-left: 2px solid #333;
     }
   }
 
@@ -220,7 +222,9 @@ section.firefighters {
 
     @media screen and (max-width: 480px) {
       width: 100%;
-      font-size: 12px !important;
+      font-size: 16px !important;
+      border-left: 2px solid #333;
+      padding-bottom: 24px;
     }
     @media screen and (max-width: 480px) {
       font-size: 18px;
