@@ -57,11 +57,12 @@ html {
   }
 
   &.roots {
-    left: -100%;
+    left: +100%;
     background-image: url('../images/roots_main.jpg');
   }
 
   &.sperduta {
+    left: -100%;
     background-image: url('../images/sperduta_main.jpg');
   }
 
@@ -71,7 +72,6 @@ html {
   }
 
   &.firefighters {
-    left: +100%;
     background-image: url('../images/firefighters_main.jpg');
   }
 
