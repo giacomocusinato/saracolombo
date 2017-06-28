@@ -174,7 +174,6 @@ section.firefighters {
     padding-left: 24px;
   }
   .section-10 .slider {
-    background: red;
     height: 30vw;
     width: 48%;
     overflow: hidden;
@@ -212,6 +211,7 @@ section.firefighters {
     }
     &:nth-of-type(5) {
       background-image: url("../images/firefighters/sketchbook/4.jpg");
+      left: +100%;
     }
     &:nth-of-type(6) {
       background-image: url("../images/firefighters/sketchbook/5.jpg");
@@ -223,6 +223,7 @@ section.firefighters {
     }
     &:nth-of-type(8) {
       background-image: url("../images/firefighters/sketchbook/7.jpg");
+      left: +100%;
     }
     &:nth-of-type(9) {
       background-image: url("../images/firefighters/sketchbook/8.jpg");
@@ -243,7 +244,6 @@ section.firefighters {
   .section-12 .slider {
     margin-left: auto;
     margin-right: auto;
-    background-color: red;
     height: 50vw;
     width: 100%;
     overflow: hidden;

@@ -75,10 +75,10 @@ $(function() {
 
     $(projects)
       .animate({
-        'width': '+=20px',
-        'height': '+=20px',
-        'margin-left': '-=10px',
-        'margin-top': '-=10px'
+        'width': '100%',
+        'height': '100%',
+        'margin-left': '0px',
+        'margin-top': '0px'
       }, 400)
 
   });
@@ -154,7 +154,7 @@ $(function() {
 
     $(projects[currentProject])
       .show()
-      .css('position', 'relative')
+      .addClass('opened')
       .animate({
         'width': '-=12%',
         'height': '-=120px',
@@ -194,7 +194,7 @@ $(function() {
         'height': '100%',
         'margin': '0'
       }, 1200, function() {
-        $(this).css('position', 'absolute');
+        $(this).removeClass('opened');
         $('.top-link').css('color', 'white');
         $('.top-link.left').fadeOut();
 

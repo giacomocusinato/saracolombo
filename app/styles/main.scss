@@ -7,6 +7,7 @@ $icon-font-path: '../fonts/'; // bower:scss
 @import "projects/roots";
 @import "projects/firefighters";
 
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -23,6 +24,7 @@ html {
 }
 
 .top-link,
+.top-link:active,
 .top-link:hover {
   color: white;
   text-decoration: none !important;
@@ -48,6 +50,11 @@ html {
   width: 100vw;
   overflow: none;
   position: absolute;
+
+  &.opened {
+    min-height: 540px;
+    position: relative;
+  }
 
   &.roots {
     left: -100%;
