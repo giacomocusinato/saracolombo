@@ -161,10 +161,9 @@ $(function() {
         'margin-top': '+96px',
         'margin-left': '+=6%'
       }, 1200, function() {
-        $('.project-title')
-          .animate({
-            'top': '-72px'
-          }, 500);
+        $(this)
+          .find('.project-title')
+          .addClass('position-top');
         $('html, body').css('overflow', 'visible');
         $('.top-link').css('color', '#333');
         $('.top-link.left').fadeIn();
@@ -177,16 +176,12 @@ $(function() {
     if (!projectOpened || animationOnGoing) return;
 
     animationOnGoing = true;
+
     $('section.project').fadeOut();
     $(projects[currentProject])
       .find('.project-title')
-      .fadeOut()
-      .animate({
-        'top': '45%'
-      }, 1200, function() {
-        $(this).removeClass('active');
-        $(this).fadeIn();
-      });
+      .fadeOut();
+
     $(projects[currentProject])
       .delay(400)
       .animate({
@@ -194,7 +189,12 @@ $(function() {
         'height': '100%',
         'margin': '0'
       }, 1200, function() {
-        $(this).removeClass('opened');
+        $(this)
+          .removeClass('opened')
+          .find('.project-title')
+          .removeClass('active position-top')
+          .fadeIn();
+
         $('.top-link').css('color', 'white');
         $('.top-link.left').fadeOut();
 

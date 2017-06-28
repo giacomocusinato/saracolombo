@@ -1,12 +1,10 @@
 $icon-font-path: '../fonts/'; // bower:scss
- @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
- // endbower
-
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
 @import "projects/projects";
 @import "projects/sperduta";
 @import "projects/roots";
 @import "projects/firefighters";
-
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -32,6 +30,10 @@ html {
   top: 24px;
   z-index: 1;
 
+  @media screen and (max-width: 480px) {
+    top: 18px;
+  }
+
   &.left {
     left: 24px;
     display: none;
@@ -54,6 +56,9 @@ html {
   &.opened {
     min-height: 540px;
     position: relative;
+    @media screen and (max-width: 480px) {
+      min-height: 0;
+    }
   }
 
   &.roots {
@@ -97,6 +102,18 @@ html {
 
     &.active {
       color: #333;
+    }
+
+    &.position-top {
+      top: -72px !important;
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+
+      @media screen and (max-width: 480px) {
+        top: -52px !important;
+      }
     }
     @media screen and (max-width: 600px) {
       font-size: 42px;
