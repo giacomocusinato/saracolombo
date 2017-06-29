@@ -1,6 +1,24 @@
 section.firefighters {
 
   .section-2 .image {
+    background-size: 120%;
+    background-position: 50% 40%;
+    background-repeat: no-repeat;
+    height: 60vw;
+    width: 48%;
+
+    &:nth-child(1) {
+      background-image: url("../images/firefighters/figurini/1.jpg");
+      float: left;
+    }
+
+    &:nth-child(2) {
+      background-image: url("../images/firefighters/figurini/2.jpg");
+      float: right;
+    }
+  }
+
+  .section-3 .image {
     background-image: url("../images/firefighters/sacco/14.jpg");
     background-size: 130%;
     background-position: 50% 0%;
@@ -18,7 +36,7 @@ section.firefighters {
     }
   }
 
-  .section-3 .slider {
+  .section-4 .slider {
     margin-left: auto;
     margin-right: auto;
     height: 45vw;
@@ -26,13 +44,13 @@ section.firefighters {
     overflow: hidden;
     position: relative;
   }
-  .section-3 .slider-inner {
+  .section-4 .slider-inner {
     position: relative;
     width: 100%;
     height: 100%;
     top: 0;
   }
-  .section-3 .image {
+  .section-4 .image {
     background-size: 120%;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -57,7 +75,7 @@ section.firefighters {
     }
   }
 
-  .section-4 .box {
+  .section-5 .box {
     top: 56px;
     padding-right: 8%;
     z-index: 4;
@@ -88,7 +106,7 @@ section.firefighters {
       width: 50%;
     }
   }
-  .section-4 .image {
+  .section-5 .image {
     background-image: url("../images/firefighters/sacco/8.jpg");
     background-size: 110%;
     background-position: 50% 0%;
@@ -103,7 +121,7 @@ section.firefighters {
     }
   }
 
-  .section-5 .image {
+  .section-6 .image {
     background-image: url("../images/firefighters/sacco/5.jpg");
     background-size: 110%;
     background-position: 50% 50%;
@@ -114,7 +132,7 @@ section.firefighters {
     width: 100%;
   }
 
-  .section-6 .slider {
+  .section-7 .slider {
     height: 25vw;
     width: 48%;
     overflow: hidden;
@@ -154,13 +172,13 @@ section.firefighters {
       }
     }
   }
-  .section-6 .slider-inner {
+  .section-7 .slider-inner {
     position: relative;
     width: 100%;
     height: 100%;
     top: 0;
   }
-  .section-6 .image {
+  .section-7 .image {
     background-size: 120%;
     background-position: 50% 0%;
     background-repeat: no-repeat;
@@ -169,7 +187,7 @@ section.firefighters {
     position: absolute;
   }
 
-  .section-7 .image {
+  .section-8 .image {
     background-image: url("../images/firefighters/sacco.gif");
     background-size: 120%;
     background-position: 50% 0%;
@@ -185,7 +203,7 @@ section.firefighters {
     }
   }
 
-  .section-8 p {
+  .section-9 p {
     width: 100%;
     font-size: 24px;
     border-left: 3px solid #333;
@@ -197,7 +215,7 @@ section.firefighters {
     }
   }
 
-  .section-9 .image {
+  .section-10 .image {
     background-image: url("../images/firefighters/postina/3.jpg");
     background-size: 120%;
     background-position: 50% 0%;
@@ -212,7 +230,7 @@ section.firefighters {
     }
   }
 
-  .section-10 p {
+  .section-11 p {
     font-size: 18px;
     position: absolute;
     width: 48%;
@@ -233,7 +251,7 @@ section.firefighters {
       margin-bottom: 12px;
     }
   }
-  .section-10 .slider {
+  .section-11 .slider {
     height: 30vw;
     width: 48%;
     overflow: hidden;
@@ -245,13 +263,13 @@ section.firefighters {
       height: 60vw;
     }
   }
-  .section-10 .slider-inner {
+  .section-11 .slider-inner {
     position: relative;
     width: 100%;
     height: 100%;
     top: 0;
   }
-  .section-10 .image {
+  .section-11 .image {
     background-size: 110%;
     background-position: 50% 0%;
     background-repeat: no-repeat;
@@ -296,7 +314,7 @@ section.firefighters {
     }
   }
 
-  .section-11 .image {
+  .section-12 .image {
     background-image: url("../images/firefighters/postina/1.jpg");
     background-size: 120%;
     background-position: 50% 100%;
@@ -306,7 +324,7 @@ section.firefighters {
     float: left;
   }
 
-  .section-12 .slider {
+  .section-13 .slider {
     margin-left: auto;
     margin-right: auto;
     height: 50vw;
@@ -314,13 +332,13 @@ section.firefighters {
     overflow: hidden;
     position: relative;
   }
-  .section-12 .slider-inner {
+  .section-13 .slider-inner {
     position: relative;
     width: 100%;
     height: 100%;
     top: 0;
   }
-  .section-12 .image {
+  .section-13 .image {
     background-size: 120%;
     background-position: 50% 0%;
     background-repeat: no-repeat;
