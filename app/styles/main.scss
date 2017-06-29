@@ -61,14 +61,13 @@ html {
     }
   }
 
-  &.roots {
-    left: +100%;
-    background-image: url('../images/roots_main.jpg');
-  }
-
   &.sperduta {
     left: -100%;
     background-image: url('../images/sperduta_main.jpg');
+  }
+
+  &.firefighters {
+    background-image: url('../images/firefighters_main.jpg');
   }
 
   &.black {
@@ -76,9 +75,17 @@ html {
     background-image: url('../images/black_main.jpg');
   }
 
-  &.firefighters {
-    background-image: url('../images/firefighters_main.jpg');
+  &.roots {
+    left: +100%;
+    background-image: url('../images/roots_main.jpg');
   }
+
+  &.uppercut {
+    left: +100%;
+    background-image: url('../images/uppercut_main.jpg');
+  }
+
+
 
   h1.project-title {
     font-family: 'Fugue Regular', sans-serif;
