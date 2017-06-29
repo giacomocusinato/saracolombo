@@ -2,26 +2,11 @@ $(function() {
 
   let controller = new ScrollMagic.Controller();
 
-
-  $('.project.sperduta').load('partials/sperduta.html', function() {
-    loadSperdutaScenes();
-  });
-
-  $('.project.roots').load('partials/roots.html', function() {
-    loadRootsScenes();
-  });
-
-  $('.project.firefighters').load('partials/firefighters.html', function() {
-    loadFirefightersScenes();
-  });
-
-  $('.project.black').load('partials/black.html', function() {
-    loadBlackScenes();
-  });
-
-  $('.project.uppercut').load('partials/uppercut.html', function() {
-    loadUppercutScenes();
-  });
+  loadSperdutaScenes();
+  loadRootsScenes();
+  loadFirefightersScenes();
+  loadBlackScenes();
+  loadUppercutScenes();
 
 
   /*----------- Sperduta scenes -----------*/
@@ -96,6 +81,7 @@ $(function() {
   }
 
 
+
   /*----------- Firefighters scenes -----------*/
 
   function loadFirefightersScenes() {
@@ -113,11 +99,13 @@ $(function() {
   }
 
 
+
   /*----------- Black scenes -----------*/
 
   function loadBlackScenes() {
 
   }
+
 
 
   /*----------- Uppercut scenes -----------*/
@@ -147,17 +135,17 @@ $(function() {
       }))
       .addTo(controller);
 
-      new ScrollMagic.Scene({
-          triggerElement: '.uppercut .section-6',
-          duration: 1500,
-        })
-        .setTween(TweenMax.to('.uppercut .section-7 .box', 1, {
-          css: {
-            top: '+=48px'
-          },
-          ease: Linear.easeNone
-        }))
-        .addTo(controller);
+    new ScrollMagic.Scene({
+        triggerElement: '.uppercut .section-6',
+        duration: 1500,
+      })
+      .setTween(TweenMax.to('.uppercut .section-7 .box', 1, {
+        css: {
+          top: '+=48px'
+        },
+        ease: Linear.easeNone
+      }))
+      .addTo(controller);
   }
 
 
