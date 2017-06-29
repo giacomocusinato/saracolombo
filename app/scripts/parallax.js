@@ -123,7 +123,41 @@ $(function() {
   /*----------- Uppercut scenes -----------*/
 
   function loadUppercutScenes() {
+    $('.uppercut .row').each(function(i) {
+      new ScrollMagic.Scene({
+          triggerElement: '.uppercut .section-' + (i + 1),
+          duration: 1500,
+        })
+        .setTween(TweenMax.to('.uppercut .section-' + (i + 2) + ' .image', 1, {
+          backgroundPosition: '50% 100%',
+          ease: Linear.easeNone
+        }))
+        .addTo(controller);
+    });
 
+    new ScrollMagic.Scene({
+        triggerElement: '.uppercut .section-4',
+        duration: 1500,
+      })
+      .setTween(TweenMax.to('.uppercut .section-5 .box', 1, {
+        css: {
+          top: '+=48px'
+        },
+        ease: Linear.easeNone
+      }))
+      .addTo(controller);
+
+      new ScrollMagic.Scene({
+          triggerElement: '.uppercut .section-6',
+          duration: 1500,
+        })
+        .setTween(TweenMax.to('.uppercut .section-7 .box', 1, {
+          css: {
+            top: '+=48px'
+          },
+          ease: Linear.easeNone
+        }))
+        .addTo(controller);
   }
 
 

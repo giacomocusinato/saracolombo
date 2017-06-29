@@ -102,7 +102,9 @@ section.roots {
   }
 
   .section-6 .hero {
-    font-size: 18px;
+    @media screen and (max-width: 480px) {
+      font-size: 18px;
+    }
   }
   .section-6 .line-big {
     margin-bottom: 0;

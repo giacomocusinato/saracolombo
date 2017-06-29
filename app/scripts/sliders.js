@@ -17,6 +17,8 @@ $(function() {
   let sliderFive = new slider($('.firefighters .section-10 .slider'));
   let sliderSix = new slider($('.firefighters .section-12 .slider'));
 
+  let sliderSeven = new slider($('.uppercut .section-8 .slider'));
+
 
   let animationOnGoing = false;
 
@@ -52,6 +54,10 @@ $(function() {
   $('.firefighters .section-12 .slider-nav').click(function() {
     $(this).hasClass('right') ?
       swipe(sliderSix, 'left') : swipe(sliderSix, 'right')
+  });
+  $('.uppercut .section-8 .slider-nav').click(function() {
+    $(this).hasClass('right') ?
+      swipe(sliderSeven, 'left') : swipe(sliderSeven, 'right')
   });
 
 
