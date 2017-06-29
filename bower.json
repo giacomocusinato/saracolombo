@@ -16,6 +16,12 @@
         "assets/javascripts/bootstrap.js"
       ]
     },
+    "gsap": {
+      "main": [
+        "src/uncompressed/TweenMax.js",
+        "src/uncompressed/plugins/ScrollToPlugin.js"
+      ]
+    },
     "scrollmagic": {
       "main": [
         "scrollmagic/uncompressed/ScrollMagic.js",

@@ -46,6 +46,9 @@ $(function() {
   });
 
   $(window).on('wheel', function(e) {
+    e.preventDefault();
+    smoothScrolling(e);
+
     let deltaY = e.originalEvent.deltaY;
     let deltaX = e.originalEvent.deltaX;
 
@@ -259,6 +262,20 @@ $(function() {
   }
 
 
+  function smoothScrolling(e) {
+    let w = $(window);
+    let delta = e.originalEvent.wheelDelta / 120 || -e.originalEvent.detail / 3;
+    let sroll = w.scrollTop() - parseInt(delta * 300);
+    TweenMax.to(w, 1.2, {
+        scrollTo: {
+            y: sroll,
+            autoKill: !0
+        },
+        ease: Expo.easeOut,
+        autoKill: !0,
+        overwrite: 5
+    });
+  }
 
   /*----------- Utility functions -----------*/
 
