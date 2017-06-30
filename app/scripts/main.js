@@ -1,9 +1,6 @@
 $(function() {
   'use strict';
 
-  $(document).ready(function() { console.log('document ready'); });
-  $(window).on('load', function() { console.log('window ready'); })
-
   /*----------- Global variables -----------*/
 
 
@@ -308,7 +305,8 @@ $(function() {
         '../images/sperduta_main.jpg',
         '../images/roots_main.jpg',
         '../images/firefighters_main.jpg',
-        '../images/black_main.jpg'
+        '../images/black_main.jpg',
+        '../images/uppercut_main.jpg',
       ]
       for (let e = 0; e < images.length; e++)
           $('<img />').attr('src', images[e])
