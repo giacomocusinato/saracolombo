@@ -19,6 +19,12 @@ $(function() {
 
   let sliderSeven = new slider($('.uppercut .section-8 .slider'));
 
+  let sliderEightLeft = new slider($('.black .section-2 .slider.left'));
+  let sliderEightRight = new slider($('.black .section-2 .slider.right'));
+  let sliderNine = new slider($('.black .section-5 .slider'));
+  let sliderTen = new slider($('.black .section-8 .slider'));
+  let sliderEleven = new slider($('.black .section-9 .slider'));
+
 
   let animationOnGoing = false;
 
@@ -59,6 +65,31 @@ $(function() {
     $(this).hasClass('right') ?
       swipe(sliderSeven, 'left') : swipe(sliderSeven, 'right')
   });
+  $('.black .section-2 .slider-nav').click(function() {
+    if ($(this).hasClass('right')) {
+      swipe(sliderEightLeft, 'left', true);
+      swipe(sliderEightRight, 'left', true);
+      animationOnGoing = true;
+    } else {
+      swipe(sliderEightLeft, 'right', true);
+      swipe(sliderEightRight, 'right', true);
+      animationOnGoing = true;
+    }
+
+  });
+  $('.black .section-5 .slider-nav').click(function() {
+    $(this).hasClass('right') ?
+      swipe(sliderNine, 'left') : swipe(sliderNine, 'right')
+  });
+  $('.black .section-8 .slider-nav').click(function() {
+    $(this).hasClass('right') ?
+      swipe(sliderTen, 'left') : swipe(sliderTen, 'right')
+  });
+  $('.black .section-9 .slider-nav').click(function() {
+    $(this).hasClass('right') ?
+      swipe(sliderEleven, 'left') : swipe(sliderEleven, 'right')
+  });
+
 
 
   $('.slider').hover(function() {

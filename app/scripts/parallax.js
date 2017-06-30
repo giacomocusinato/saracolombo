@@ -103,7 +103,17 @@ $(function() {
   /*----------- Black scenes -----------*/
 
   function loadBlackScenes() {
-
+    $('.black .row').each(function(i) {
+      new ScrollMagic.Scene({
+          triggerElement: '.black .section-' + (i + 1),
+          duration: 1500,
+        })
+        .setTween(TweenMax.to('.black .section-' + (i + 2) + ' .image', 1, {
+          backgroundPosition: '50% 100%',
+          ease: Linear.easeNone
+        }))
+        .addTo(controller);
+    });
   }
 
 
