@@ -1,6 +1,8 @@
 $(function() {
   'use strict';
 
+  $(document).ready(function() { console.log('document ready'); });
+  $(window).on('load', function() { console.log('window ready'); })
 
   /*----------- Global variables -----------*/
 
