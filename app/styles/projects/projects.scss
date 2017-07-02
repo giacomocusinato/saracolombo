@@ -1,6 +1,67 @@
+.next-project-container {
+  margin: 220px -12vw 0 -12vw;
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vw;
+  width: 100vw;
+  min-height: 220px;
+  position: relative;
+  opacity: 0.7;
+
+  &.sperduta {
+    background-image: url('../images/sperduta_main.jpg');
+  }
+
+  &.firefighters {
+    background-image: url('../images/firefighters_main.jpg');
+  }
+
+  &.black {
+    background-image: url('../images/black_main.jpg');
+  }
+
+  &.roots {
+    background-image: url('../images/roots_main.jpg');
+  }
+
+  &.uppercut {
+    background-image: url('../images/uppercut_main.jpg');
+  }
+
+  .next-project {
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    white-space: nowrap;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    @media screen and (max-width: 600px) {
+        font-size: 18px;
+    }
+    .next {
+      margin: 0;
+    }
+    .title {
+      font-size: 48px;
+      cursor: pointer;
+      margin: 0;
+
+      @media screen and (max-width: 600px) {
+          font-size: 36px;
+      }
+    }
+  }
+}
+
 section.project {
   display: none;
-  margin: 48px 12%;
+  margin: 48px 12% 0;
 
   .image {
     max-height: 800px;

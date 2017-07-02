@@ -65,6 +65,12 @@ $(function() {
     openProject(getUrlParam('p'));
   });
 
+  $('.next-project .title').click(function() {
+    let p = $(this).attr('data-open');
+    window.history.replaceState('page' + p, p, '?p=' + p);
+    window.location.reload();
+  });
+
   $('.project-title').hover(function() {
     if (projectOpened) return;
 
@@ -89,7 +95,35 @@ $(function() {
   });
 
   $('.top-link.left').click(function() {
-    closeProject();
+    $('html, body').animate({
+      scrollTop: 0
+    }, 800, function() {
+      closeProject();
+    });
+  });
+
+  $(window).scroll(function() {
+    if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+      $('.next-project .title').addClass('animated pulse');
+    }
+  });
+
+  $('.next-project .title').hover(function() {
+    $('.next-project-container')
+      .animate({
+        'width': '-=20px',
+        'height': '-=20px',
+        'margin-left': '+=10px',
+        'margin-top': '+=10px'
+      }, 400);
+  }, function() {
+    $('.next-project-container')
+      .animate({
+        'width': '100vw',
+        'height': '30vw',
+        'margin': '220px -12vw 0 -12vw'
+      }, 400)
+
   });
 
 
