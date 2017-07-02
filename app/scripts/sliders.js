@@ -11,11 +11,11 @@ $(function() {
   let sliderOne = new slider($('.sperduta .section-2 .slider'));
   let sliderTwo = new slider($('.sperduta .section-3 .slider'));
 
-  let sliderThree = new slider($('.firefighters .section-3 .slider'));
-  let sliderFourLeft = new slider($('.firefighters .section-6 .slider.left'));
-  let sliderFourRight = new slider($('.firefighters .section-6 .slider.right'));
-  let sliderFive = new slider($('.firefighters .section-10 .slider'));
-  let sliderSix = new slider($('.firefighters .section-12 .slider'));
+  let sliderThree = new slider($('.firefighters .section-4 .slider'));
+  let sliderFourLeft = new slider($('.firefighters .section-7 .slider.left'));
+  let sliderFourRight = new slider($('.firefighters .section-7 .slider.right'));
+  let sliderFive = new slider($('.firefighters .section-11 .slider'));
+  let sliderSix = new slider($('.firefighters .section-13 .slider'));
 
   let sliderSeven = new slider($('.uppercut .section-8 .slider'));
 
@@ -37,11 +37,11 @@ $(function() {
     $(this).hasClass('right') ?
       swipe(sliderTwo, 'left') : swipe(sliderTwo, 'right')
   });
-  $('.firefighters .section-3 .slider-nav').click(function() {
+  $('.firefighters .section-4 .slider-nav').click(function() {
     $(this).hasClass('right') ?
       swipe(sliderThree, 'left') : swipe(sliderThree, 'right')
   });
-  $('.firefighters .section-6 .slider-nav').click(function() {
+  $('.firefighters .section-7 .slider-nav').click(function() {
     if ($(this).hasClass('right')) {
       swipe(sliderFourLeft, 'left', true);
       swipe(sliderFourRight, 'left', true);
@@ -53,11 +53,11 @@ $(function() {
     }
 
   });
-  $('.firefighters .section-10 .slider-nav').click(function() {
+  $('.firefighters .section-11 .slider-nav').click(function() {
     $(this).hasClass('right') ?
       swipe(sliderFive, 'left') : swipe(sliderFive, 'right')
   });
-  $('.firefighters .section-12 .slider-nav').click(function() {
+  $('.firefighters .section-13 .slider-nav').click(function() {
     $(this).hasClass('right') ?
       swipe(sliderSix, 'left') : swipe(sliderSix, 'right')
   });
