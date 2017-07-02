@@ -15,7 +15,6 @@ $(function() {
   let interval;
   let intervalTime = 7000;
 
-  console.log('init');
 
 
   /*----------- Inits -----------*/
@@ -51,17 +50,15 @@ $(function() {
     for (i = 0, j = images.length; i < j; i++) {
       (function(img, src) {
         img.onload = function() {
-          console.log('loaded');
-          if (++loaded == images.length && callback) {
-            alert('all loaded');
+          if (++loaded >= images.length && callback) {
             callback();
           }
         };
 
         // Use the following callback methods to debug
         // in case of an unexpected behavior.
-        img.onerror = function() { console.log('error'); };
-        img.onabort = function() { console.log('abort'); };
+        img.onerror = function() { loaded++; };
+        img.onabort = function() { loaded++; };
 
         img.src = src;
       }(new Image(), images[i]));
