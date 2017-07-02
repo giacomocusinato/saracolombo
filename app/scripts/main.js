@@ -49,15 +49,17 @@ $(function() {
     for (i = 0, j = images.length; i < j; i++) {
       (function(img, src) {
         img.onload = function() {
+          console.log('loaded');
           if (++loaded == images.length && callback) {
+            console.log('all loaded');
             callback();
           }
         };
 
         // Use the following callback methods to debug
         // in case of an unexpected behavior.
-        img.onerror = function() {};
-        img.onabort = function() {};
+        img.onerror = function() { console.log('error'); };
+        img.onabort = function() { console.log('abort'); };
 
         img.src = src;
       }(new Image(), images[i]));
