@@ -18,21 +18,51 @@ $(function() {
 
   /*----------- Inits -----------*/
 
+  preloadImages(init);
+
+  function init() {
+    $('.site-loader').hide();
+    $('.site-content').show().fadeIn();
+
+    manageUrlParams();
+
+    interval = setTimeout(callback, intervalTime);
+
+    $(projects[currentProject])
+      .find('.project-title')
+      .show()
+      .fadeIn();
+  };
 
 
-    $(window).on('load', function() {
-      $('.site-loader').hide();
-      $('.site-content').show().fadeIn();
 
-      manageUrlParams();
+  function preloadImages(callback) {
+    let i, j, loaded = 0;
+    let images = [
+      '../images/firefighters_main.jpg',
+      '../images/black_main.jpg',
+      '../images/uppercut_main.jpg',
+      '../images/sperduta_main.jpg',
+      '../images/roots_main.jpg'
+    ]
 
-      interval = setTimeout(callback, intervalTime);
+    for (i = 0, j = images.length; i < j; i++) {
+      (function(img, src) {
+        img.onload = function() {
+          if (++loaded == images.length && callback) {
+            callback();
+          }
+        };
 
-      $(projects[currentProject])
-        .find('.project-title')
-        .show()
-        .fadeIn();
-    });
+        // Use the following callback methods to debug
+        // in case of an unexpected behavior.
+        img.onerror = function() {};
+        img.onabort = function() {};
+
+        img.src = src;
+      }(new Image(), images[i]));
+    }
+  };
 
 
   /*----------- Event listeners -----------*/
