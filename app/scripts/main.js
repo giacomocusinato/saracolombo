@@ -15,6 +15,8 @@ $(function() {
   let interval;
   let intervalTime = 7000;
 
+  console.log('init');
+
 
   /*----------- Inits -----------*/
 
@@ -39,19 +41,19 @@ $(function() {
   function preloadImages(callback) {
     let i, j, loaded = 0;
     let images = [
-      '../images/firefighters_main.jpg',
-      '../images/black_main.jpg',
-      '../images/uppercut_main.jpg',
-      '../images/sperduta_main.jpg',
-      '../images/roots_main.jpg'
-    ]
+      './images/firefighters_main.jpg',
+      './images/black_main.jpg',
+      './images/uppercut_main.jpg',
+      './images/sperduta_main.jpg',
+      './images/roots_main.jpg'
+    ];
 
     for (i = 0, j = images.length; i < j; i++) {
       (function(img, src) {
         img.onload = function() {
           console.log('loaded');
           if (++loaded == images.length && callback) {
-            console.log('all loaded');
+            alert('all loaded');
             callback();
           }
         };
