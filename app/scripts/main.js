@@ -18,16 +18,21 @@ $(function() {
 
   /*----------- Inits -----------*/
 
-  manageUrlParams();
-
-  interval = setTimeout(callback, intervalTime);
 
 
-  $(projects[currentProject])
-    .find('.project-title')
-    .show()
-    .fadeIn();
+    $(window).on('load', function() {
+      $('.site-loader').hide();
+      $('.site-content').show().fadeIn();
 
+      manageUrlParams();
+
+      interval = setTimeout(callback, intervalTime);
+
+      $(projects[currentProject])
+        .find('.project-title')
+        .show()
+        .fadeIn();
+    });
 
 
   /*----------- Event listeners -----------*/
