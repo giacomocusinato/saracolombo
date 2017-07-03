@@ -15,6 +15,21 @@ $icon-font-path: '../fonts/'; // bower:scss
   padding: 0.2em 0;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+
 body,
 html {
   overflow: hidden;
@@ -29,15 +44,21 @@ html {
   width: 100%;
   display: none;
 }
+
+.site-loader .header-wrapper {
+  top: 45%;
+  position: absolute;
+  left: 50%;
+  animation: pulse 3s linear infinite;
+}
 .site-loader h1 {
   font-size: 72px;
   color: #333;
   position: absolute;
-  top: 45%;
-  left: 50%;
   white-space: nowrap;
   transform: translate(-50%, -50%);
 }
+
 .site-loader .line {
   position: absolute;
   top: 60%;
