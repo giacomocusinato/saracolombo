@@ -95,7 +95,8 @@ section.firefighters {
          color: #333;
          display: block;
          border-left: 2px solid #333;
-         padding: 0 0 24px 24px;
+         padding-left: 24px;
+         margin-bottom: 60px;
          font-size: 16px;
        }
     }
@@ -210,7 +211,7 @@ section.firefighters {
     padding-left: 24px;
 
     @media screen and (max-width: 480px) {
-      font-size: 18px;
+      font-size: 16px;
       border-left: 2px solid #333;
     }
   }
@@ -239,16 +240,10 @@ section.firefighters {
     padding-left: 24px;
 
     @media screen and (max-width: 480px) {
-      width: 100%;
-      font-size: 16px !important;
-      border-left: 2px solid #333;
-      padding-bottom: 24px;
-    }
-    @media screen and (max-width: 480px) {
-      font-size: 18px;
+      font-size: 16px;
       position: relative;
       width: 100%;
-      margin-bottom: 12px;
+      margin-bottom: 60px;
     }
   }
   .section-11 .slider {

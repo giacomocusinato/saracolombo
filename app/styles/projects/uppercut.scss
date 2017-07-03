@@ -20,7 +20,7 @@ section.uppercut {
     border-left: 3px solid #333;
     padding-left: 24px;
     @media screen and (max-width: 480px) {
-      font-size: 18px;
+      font-size: 16px;
       border-left: 2px solid #333;
     }
   }
@@ -57,7 +57,8 @@ section.uppercut {
         color: #333;
         display: block;
         border-left: 2px solid #333;
-        padding: 0 0 24px 24px;
+        padding-left: 24px;
+        margin-bottom: 60px;
         font-size: 16px;
       }
     }
@@ -106,6 +107,7 @@ section.uppercut {
       width: 75%;
       height: 74vw;
       float: right;
+      margin-bottom: 28px;
     }
   }
 
@@ -132,7 +134,7 @@ section.uppercut {
         color: #333;
         display: block;
         border-left: 2px solid #333;
-        padding: 24px 0 0 24px;
+        padding-left: 24px;
       }
     }
   }
