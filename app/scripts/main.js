@@ -19,12 +19,34 @@ $(function() {
 
   /*----------- Inits -----------*/
 
-  preloadImages(init);
+  preloadImages(imagesLoaded);
+
+  // Hide loader container if url is a project
+  let isProject = urlParamIsProject();
+  if (!isProject) {
+    $('.site-content')
+      .css('left', '100%')
+      .show();
+    $('.site-loader').show();
+    $('.site-loader .line')
+      .animate({
+        'width': '100vw'
+      }, 10000);
+  }
+
+  function imagesLoaded() {
+    if (isProject) {
+      init();
+    } else {
+      loaderAnimation();
+    }
+  }
 
   function init() {
     $('.site-loader').hide();
-    $('.site-content').show().fadeIn();
+    $('.site-content').show();
 
+    resetContainersSize();
     manageUrlParams();
 
     interval = setTimeout(callback, intervalTime);
@@ -33,36 +55,6 @@ $(function() {
       .find('.project-title')
       .show()
       .fadeIn();
-  };
-
-
-
-  function preloadImages(callback) {
-    let i, j, loaded = 0;
-    let images = [
-      './images/firefighters_main.jpg',
-      './images/black_main.jpg',
-      './images/uppercut_main.jpg',
-      './images/sperduta_main.jpg',
-      './images/roots_main.jpg'
-    ];
-
-    for (i = 0, j = images.length; i < j; i++) {
-      (function(img, src) {
-        img.onload = function() {
-          if (++loaded >= images.length && callback) {
-            callback();
-          }
-        };
-
-        // Use the following callback methods to debug
-        // in case of an unexpected behavior.
-        img.onerror = function() { loaded++; };
-        img.onabort = function() { loaded++; };
-
-        img.src = src;
-      }(new Image(), images[i]));
-    }
   };
 
 
@@ -349,6 +341,66 @@ $(function() {
     });
   }
 
+  function loaderAnimation() {
+    $('.site-loader .line')
+      .stop()
+      .animate({
+        'width': '100vw'
+      }, 800, function() {
+        $(this)
+          .css('right', 0)
+          .css('left', 'auto')
+          .animate({
+            'width': 0
+          }, 800, function() {
+            $('.site-loader')
+              .animate({
+                'left': '-=50%'
+              }, 2000);
+            $('.site-content')
+              .animate({
+                'left': '-=100%'
+              }, 2000, function() {
+                init();
+              });
+          });
+      });
+  }
+
+
+
+  function preloadImages(callback) {
+    let i, j, loaded = 0;
+    let images = [
+      './images/firefighters_main.jpg',
+      './images/black_main.jpg',
+      './images/uppercut_main.jpg',
+      './images/sperduta_main.jpg',
+      './images/roots_main.jpg'
+    ];
+
+    for (i = 0, j = images.length; i < j; i++) {
+      (function(img, src) {
+        img.onload = function() {
+          if (++loaded >= images.length && callback) {
+            callback();
+          }
+        };
+
+        // Use the following callback methods to debug
+        // in case of an unexpected behavior.
+        img.onerror = function() {
+          loaded++;
+        };
+        img.onabort = function() {
+          loaded++;
+        };
+
+        img.src = src;
+      }(new Image(), images[i]));
+    }
+  };
+
   /*----------- Utility functions -----------*/
 
 
@@ -358,6 +410,19 @@ $(function() {
     var string = reg.exec(href);
     return string ? string[1] : null;
   };
+
+
+  function urlParamIsProject() {
+    let projectFoud = false;
+    let p = getUrlParam('p');
+    $(projects).each(function(i, item) {
+      let projectName = $(item).find('h1.project-title').attr('data-open');
+      if (projectName == p) {
+        projectFoud = true;
+      }
+    });
+    return projectFoud;
+  }
 
   function calcNext(i) {
     if (i == projects.length - 1)
@@ -372,16 +437,4 @@ $(function() {
     else
       return i - 1;
   }
-
-  // function preloadImages() {
-  //     let images = [
-  //       '../images/sperduta_main.jpg',
-  //       '../images/roots_main.jpg',
-  //       '../images/firefighters_main.jpg',
-  //       '../images/black_main.jpg',
-  //       '../images/uppercut_main.jpg',
-  //     ]
-  //     for (let e = 0; e < images.length; e++)
-  //         $('<img />').attr('src', images[e])
-  // }
 });
