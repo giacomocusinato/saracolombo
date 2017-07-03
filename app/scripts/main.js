@@ -95,8 +95,12 @@ $(function() {
 
   $('.next-project .title').click(function() {
     let p = $(this).attr('data-open');
-    window.history.replaceState('page' + p, p, '?p=' + p);
-    window.location.reload();
+    $('html, body').animate({
+      scrollTop: 0
+    }, 800, function() {
+      window.history.replaceState('page' + p, p, '?p=' + p);
+      window.location.reload();
+    });
   });
 
   $('.project-title').hover(function() {
