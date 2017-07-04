@@ -77,6 +77,8 @@ $(function() {
   });
 
   $(window).on('wheel', function(e) {
+    if (bioOpened) return;
+
     e.preventDefault();
     smoothScrolling(e);
 
@@ -155,7 +157,7 @@ $(function() {
     $('.bio').css('z-index', '3').animate({
       'bottom': '0'
     }, 2000, function() {
-
+      $('.bio-inner').addClass('opened');
     });
 
     $('.site-content').css('z-index', '0').animate({
@@ -173,6 +175,7 @@ $(function() {
       'bottom': '50vh'
     }, 2000, function() {
       $(this).css('bottom', '100vh');
+      $('.bio-inner').removeClass('opened');
       bioOpened = false;
     });
 

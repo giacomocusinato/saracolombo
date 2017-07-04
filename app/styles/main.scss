@@ -82,8 +82,11 @@ html {
   bottom: 100vh;
   background-color: black;
   z-index: 1;
-  color: white;
   overflow: hidden;
+  background-image: url('../images/profile.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .bio-close,
 .bio-close:active,
@@ -94,12 +97,80 @@ html {
   top: 24px;
   right: 24px;
   z-index: 4;
+
   @media screen and (max-width: 480px) {
     top: 18px;
+    color: #333 !important;
   }
 }
 .bio-inner {
-  padding: 6%;
+  background-color: rgba(256, 256, 256, 0.8);
+  height: 100%;
+  width: 30vw;
+  position: absolute;
+  left: -30vw;
+
+  &.opened {
+    left: 0 !important;
+    -webkit-transition: all 2s;
+    -moz-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+  }
+
+  @media screen and (max-width: 480px) {
+    height: 100%;
+    width: 100vw !important;
+    bottom: 0;
+    left: -100vw !important;
+  }
+  @media screen and (max-width: 768px) {
+    width: 40vw;
+    left: -40vw;
+    font-size: 12px;
+  }
+  @media screen and (max-width: 800px) {
+    width: 45vw;
+    left: -45vw;
+    font-size: 12px;
+  }
+  @media screen and (max-width: 1280px) {
+    font-size: 12px;
+  }
+
+  .bio-text {
+    height: calc(100% - 12px);
+    overflow-y: auto;
+    position: relative;
+    color: #333;
+    padding: 24px;
+    opacity: 0.9;
+  }
+
+  .bio-text .reference {
+    float: right;
+    clear: both;
+    &.cv {
+      margin: 18px 0;
+      a, a:active, a:hover {
+        text-decoration: none;
+        color: #333;
+      }
+    }
+    &.cv, &.contact {
+      font-size: 18px;
+      @media screen and (max-width: 800px) {
+        font-size: 14px;
+      }
+    }
+    &.mail {
+      margin: -6px 0;
+    }
+    &.mail a, &.mail a:active, &.mail a:hover {
+      color: black !important;
+      text-decoration: none;
+    }
+  }
 }
 
 .site-content {
