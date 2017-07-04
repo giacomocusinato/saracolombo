@@ -75,11 +75,39 @@ html {
   left: 0;
 }
 
+.bio {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  bottom: 100vh;
+  background-color: black;
+  z-index: 1;
+  color: white;
+  overflow: hidden;
+}
+.bio-close,
+.bio-close:active,
+.bio-close:hover {
+  color: white !important;
+  text-decoration: none !important;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 4;
+  @media screen and (max-width: 480px) {
+    top: 18px;
+  }
+}
+.bio-inner {
+  padding: 6%;
+}
+
 .site-content {
   position: absolute;
   height: 100vh;
   width: 100vw;
   display: none;
+  background-color: white;
 }
 
 .top-link,
@@ -89,7 +117,7 @@ html {
   text-decoration: none !important;
   position: fixed;
   top: 24px;
-  z-index: 1;
+  z-index: 2;
   @media screen and (max-width: 480px) {
     top: 18px;
   }
@@ -170,7 +198,7 @@ html {
     }
 
     &.position-top {
-      cursor: none;
+      cursor: default;
       top: -72px !important;
       -webkit-transition: all 0.5s;
       -moz-transition: all 0.5s;

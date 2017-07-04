@@ -11,6 +11,7 @@ $(function() {
   let leftProject = 0;
   let animationOnGoing = false;
   let projectOpened = false;
+  let bioOpened = false;
   let touchStart;
   let interval;
   let intervalTime = 7000;
@@ -134,6 +135,56 @@ $(function() {
     });
   });
 
+  $('.top-link.right').click(function() {
+    bioOpened = true;
+    //
+    // if (projectOpened) {
+    //   $('html, body').animate({
+    //     scrollTop: 0
+    //   }, 800, function() {
+    //     openBio();
+    //   });
+    // } else {
+    //   openBio();
+    // }
+    openBio();
+
+  });
+
+  function openBio() {
+    $('.bio').css('z-index', '3').animate({
+      'bottom': '0'
+    }, 2000, function() {
+
+    });
+
+    $('.site-content').css('z-index', '0').animate({
+      'top': '50vh'
+    }, 2000, function() {
+      $(this).css('top', '100vh').hide();
+      projectOpened ?
+        $('.top-link').fadeOut() :
+        $('.top-link.right, .project-title').fadeOut();
+    });
+  }
+
+  $('.bio-close').click(function() {
+    $('.bio').css('z-index', '-1').animate({
+      'bottom': '50vh'
+    }, 2000, function() {
+      $(this).css('bottom', '100vh');
+      bioOpened = false;
+    });
+
+    $('.site-content').show().css('z-index', '2').animate({
+      'top': '0'
+    }, 2000, function() {
+      projectOpened ?
+        $('.top-link').fadeIn() :
+        $('.top-link.right, .project-title').fadeIn();
+    });
+  });
+
   $(window).scroll(function() {
     if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
       $('.next-project .title').addClass('animated pulse');
@@ -164,11 +215,11 @@ $(function() {
 
 
   function swipeProject(direction) {
-    if (animationOnGoing || projectOpened)
+    if (animationOnGoing || projectOpened || bioOpened)
       return;
 
     animationOnGoing = true;
-    $(projects).css('z-index', '-1');
+    $(projects).css('z-index', '0');
 
     if (direction == 'right') {
       $(projects[currentProject]).animate({
@@ -181,7 +232,7 @@ $(function() {
         swipeEnded();
       });
 
-      $(projects[rightProject]).css('z-index', '0').animate({
+      $(projects[rightProject]).css('z-index', '1').animate({
         'left': '-=100%'
       }, 2000);
     } else {
@@ -195,7 +246,7 @@ $(function() {
         swipeEnded();
       });
 
-      $(projects[leftProject]).css('z-index', '0').animate({
+      $(projects[leftProject]).css('z-index', '1').animate({
         'left': '+=100%'
       }, 2000);
     }
