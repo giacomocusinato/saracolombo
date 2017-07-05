@@ -155,7 +155,7 @@ $(function() {
 
   function openBio() {
     $('.bio').css('z-index', '3').animate({
-      'bottom': '0'
+      'bottom': '0',
     }, 2000, function() {
       $('.bio-inner').addClass('opened');
     });
