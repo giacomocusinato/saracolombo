@@ -65,6 +65,10 @@ $(function() {
   $(window).on('touchstart', function(e) {
     touchStart = e.originalEvent.touches[0].clientX;
   });
+  $(window).on('touchmove', function(e) {
+    if (bioOpened || projectOpened) return;
+    e.preventDefault();
+  })
 
   $(window).on('touchend', function(e) {
     let touchEnd = e.originalEvent.changedTouches[0].clientX;
@@ -335,7 +339,7 @@ $(function() {
   }
 
   function resetContainersSize() {
-    $('.project-title').css('top', '45%');
+    //$('.project-title').css('top', '45%');
 
     $(projects).css({
       'width': '100vw',
