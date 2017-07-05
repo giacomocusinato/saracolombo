@@ -92,18 +92,18 @@ $(function() {
 
 
 
-  $('.slider').hover(function() {
-    $(this)
-      .children('.slider-nav.left')
-      .fadeIn()
-      .addClass('animated slideInRight');
-    $(this)
-      .children('.slider-nav.right')
-      .fadeIn()
-      .addClass('animated slideInLeft');
-  }, function() {
-    $(this).children('.slider-nav').fadeOut();
-  });
+  // $('.slider').hover(function() {
+  //   $(this)
+  //     .children('.slider-nav.left')
+  //     .fadeIn()
+  //     .addClass('animated slideInRight');
+  //   $(this)
+  //     .children('.slider-nav.right')
+  //     .fadeIn()
+  //     .addClass('animated slideInLeft');
+  // }, function() {
+  //   $(this).children('.slider-nav').fadeOut();
+  // });
 
   function swipe(slider, direction, isDoubleSlider = false) {
     if (animationOnGoing) return;
