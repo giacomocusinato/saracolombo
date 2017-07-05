@@ -217,6 +217,14 @@ $(function() {
   });
 
 
+  $(window).on('resize', function() {
+    adjustAuthorPosition();
+    setTimeout(function () {
+      adjustAuthorPosition();
+    }, 2000);
+  });
+
+
 
   /*----------- Behaviour functions -----------*/
 
@@ -463,6 +471,26 @@ $(function() {
     }
   };
 
+
+  function adjustAuthorPosition() {
+    let bio = $('.bio-text');
+
+    if (bio.get(0).scrollHeight > $(window).height()) {
+      $('.bio-text .author').css({
+        'position': 'relative',
+        'bottom': 'auto',
+        'width': 'auto'
+      });
+    } else {
+        $('.bio-text .author').css({
+          'position': 'absolute',
+          'bottom': 0,
+          'width': 'calc(100% - 48px)',
+        });
+    }
+  }
+
+  
   /*----------- Utility functions -----------*/
 
 

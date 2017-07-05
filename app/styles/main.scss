@@ -109,9 +109,9 @@ html {
 .bio-inner {
   background-color: rgba(256, 256, 256, 0.8);
   height: 100%;
-  width: 30vw;
+  width: 35vw;
   position: absolute;
-  left: -30vw;
+  left: -35vw;
 
   &.opened {
     left: 0 !important;
@@ -143,10 +143,11 @@ html {
 
   .bio-text {
     height: calc(100% - 12px);
+    min-height: 100%;
     overflow-y: auto;
     position: relative;
     color: #333;
-    padding: 24px;
+    padding: 24px 24px 0 24px;
     opacity: 0.9;
 
     @media screen and (max-width: 480px) {
@@ -171,11 +172,24 @@ html {
       }
     }
     &.mail {
-      margin: -6px 0;
+      margin: -6px 0 64px 0;
     }
     &.mail a, &.mail a:active, &.mail a:hover {
-      color: black !important;
+      color: #333 !important;
       text-decoration: none;
+    }
+  }
+
+  .author {
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 48px);
+    clear: both;
+
+    a, a:active, a:hover {
+      color: #333;
+      text-decoration: underline;
     }
   }
 }
