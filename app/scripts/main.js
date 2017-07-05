@@ -143,16 +143,6 @@ $(function() {
 
   $('.top-link.right').click(function() {
     bioOpened = true;
-    //
-    // if (projectOpened) {
-    //   $('html, body').animate({
-    //     scrollTop: 0
-    //   }, 800, function() {
-    //     openBio();
-    //   });
-    // } else {
-    //   openBio();
-    // }
     openBio();
 
   });
@@ -161,6 +151,7 @@ $(function() {
     $('.bio').css('z-index', '3').animate({
       'bottom': '0',
     }, 2000, function() {
+      adjustAuthorPosition();
       $('.bio-inner').addClass('opened');
     });
 
@@ -490,7 +481,7 @@ $(function() {
     }
   }
 
-  
+
   /*----------- Utility functions -----------*/
 
 
