@@ -158,4 +158,14 @@ $(function() {
       }))
       .addTo(controller);
   }
+
+
+  new ScrollMagic.Scene({
+      offset: 100,
+    })
+    .addTo(controller)
+    .on('start', function() {
+      $('.scroll-down').fadeOut();
+    });
+
 });
