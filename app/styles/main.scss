@@ -279,13 +279,13 @@ html {
     display: none;
     z-index: 2;
 
-    &.active,
-    &:hover {
+    &:hover, &.hover {
       color: white;
       opacity: 0.9;
     }
 
     &.active {
+      opacity: 0.9;
       color: #333;
     }
 

@@ -120,7 +120,7 @@ $(function() {
         'margin-left': '+=10px',
         'margin-top': '+=10px'
       }, 400)
-      .find('.project-title').css('opacity', '0.9');
+      .find('.project-title').addClass('hover');
   }, function() {
     if (projectOpened) return;
 
@@ -131,7 +131,7 @@ $(function() {
         'margin-left': '0px',
         'margin-top': '0px'
       }, 400)
-      .find('.project-title').css('opacity', '0.7');
+      .find('.project-title').removeClass('hover');
   });
 
   $('.top-link.left').click(function() {
