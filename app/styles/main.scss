@@ -157,16 +157,22 @@ html {
   }
 
   .bio-text .reference {
-    float: right;
+    float: left;
     clear: both;
+
+    a, a:active, a:hover {
+      text-decoration: none;
+      color: #333;
+    }
+
     &.cv {
       margin: 18px 0;
-      a, a:active, a:hover {
-        text-decoration: none;
-        color: #333;
-      }
     }
-    &.cv, &.contact {
+    &.letter {
+      margin-top: -6px;
+    }
+
+    &.cv, &.contact, &.letter {
       font-size: 18px;
       @media screen and (max-width: 800px) {
         font-size: 14px;
@@ -175,10 +181,10 @@ html {
     &.mail {
       margin: -6px 0 64px 0;
     }
-    &.mail a, &.mail a:active, &.mail a:hover {
-      color: #333 !important;
-      text-decoration: none;
-    }
+    // &.mail a, &.mail a:active, &.mail a:hover {
+    //   color: #333 !important;
+    //   text-decoration: none;
+    // }
   }
 
   .author {
